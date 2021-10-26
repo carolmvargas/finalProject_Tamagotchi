@@ -90,25 +90,38 @@ class Pet {
     }
 
     feed(food){
-        let energy
+        
         if((this.typeOfPet.toLowerCase()=='katze') && food==='apfel'){
-            energy=1
+            this.reduceHunger(1); this.reduceHappyness(1);
         }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='apfel'){
-            energy=1
+            this.reduceHunger(1); 
         }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='apfel'){
-            energy=3
+            this.reduceHunger(2); this.addHappyness(1)
         }else if((this.typeOfPet.toLowerCase()=='katze') && food==='kartoffel'){
-            energy=1
+            this.reduceHunger(1); this.reduceHappyness(1)
         }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='kartoffel'){
-            energy=3
+            this.reduceHunger(1); this.reduceHappyness(1)
         }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='kartoffel'){
-            energy=2
+            this.reduceHunger(2); this.addHappyness(1)
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='fisch'){
+            this.reduceHunger(3); this.addHappyness(1)
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='fisch'){
+            this.reduceHunger(2);
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='fisch'){
+            this.reduceHunger(1); this.reduceGesund(1); this.reduceHappyness(1)
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='fleisch'){
+            this.reduceHunger(2);
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='fleisch'){
+            this.reduceHunger(3); this.addHappyness(1)
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='fleisch'){
+            this.reduceHunger(1); this.reduceGesund(1); this.reduceHappyness(1)
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='karotte'){
+            this.reduceHunger(1); this.reduceHappyness(1)
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='karotte'){
+            this.reduceHunger(1); this.reduceHappyness(1);
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='karotte'){
+            this.reduceHunger(3); this.addHappyness(1)
         }
-        this.reduceHunger(energy)
-        if (food.sweet==false){
-            this.reduceHappyness(1);
-        }
-
         console.log(`${this.name} hat ${food} gegessen`);
     }
 
@@ -157,9 +170,12 @@ console.log(hund);
 hund.feed('apfel');
 console.log(hund);
 
+
+
 //carol
 hund.addVitamin();
 hund.mission1();
+
 
 
 /* cat.addHappyness(3)
