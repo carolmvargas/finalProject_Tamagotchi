@@ -7,8 +7,6 @@ s-polat
 **dghshjsdhjskjsjdsjsdhsjdjsd**
 # Haustierpflege: Die Missionen 
 ## Kümmere dich während der Missionen um dein Haustier
-_text_
->texttext
 
 
 * Zweck des Spiels ist es, sich um das Haustier zu kümmern und alle Missionen zu beenden.
