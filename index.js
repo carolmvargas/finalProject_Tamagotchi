@@ -1,4 +1,20 @@
 
+
+/* const prompt = require('prompt-sync')();
+
+console.log("Geben Sie ein Wert für a");
+const a = Number (prompt('a? '));
+// muss den Wert von a im Terminal angeben
+
+console.log("Geben Sie jetzt ein Wert für b");
+const b = Number(prompt('b? '));
+// Gib den Wert von b zurück in das Terminal
+
+console.log("Die Summe von a + b:");
+console.log(a + b); */
+
+
+
 class Pet {
     constructor(name, typeOfPet){
         this.name=name,
@@ -8,13 +24,11 @@ class Pet {
         this.gesundheit=5,
         this.durst=5,
         this.arr=[]
-        
     }
 
     addHappyness(value){
         const sum=this.happyness+value
         this.happyness=(sum>10?10:sum) 
-
     }
 
     reduceHappyness(value){
@@ -122,23 +136,32 @@ class Pet {
         }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='karotte'){
             this.reduceHunger(3); this.addHappyness(1)
         }
-        console.log(`${this.name} hat ${food} gegessen`);
+
+            console.log(`${this.name} hat ${food} gegessen`);
+
+
     }
 
     play(){
-        if(this.hungry>=8){
-            console.log(`${this.name} ist zu hungrig zum spielen`);
-            return;    
+        if(this.hungry >= 9){
+            console.log(`${this.name} ist zu hungrig zu spielen`);
+            // return;    
         }
+        else if (this.durst >= 9) {
+            console.log(`${this.name} ist zu durstig zu spielen`);
+        } else {
         this.addHappyness(2)
         this.addHunger(3)
+        this.addDurst(2)
         console.log(`${this.name} hat gespielt!`);
+    }
     }
     sleep(){
         this.reduceHappyness(5)
         this.addHunger(2)
         console.log(`${this.name} hat geschlafen!`);
     }
+
     pflege(){
         this.addHappyness(2)
         this.addGesund(1)
@@ -166,8 +189,14 @@ class Pet {
 
 const hund =new Pet('mami', 'hunde')
 
-console.log(hund);
 hund.feed('apfel');
+console.log(hund);
+hund.play()
+console.log(hund);
+hund.play()
+console.log(hund);
+hund.printStatus()
+hund.play()
 console.log(hund);
 
 
@@ -197,4 +226,6 @@ const apfel= new Food('apfel', 1)
 const kartoffel= new Food('kartoffel', 3)
 const fisch= new Food('fisch', 3)
 const carotte= new Food('carotte', 2)
-const fleisch= new Food('fleisch', 3)*/
+const fleisch= new Food('fleisch', 3)
+ */
+

@@ -1,8 +1,8 @@
 # finalProject_Tamagotchi
 
-Caroline  
-Mauro  
-s-polat  
+Caroline
+Mauro
+Siddik
 
 # Haustierpflege: Die Missionen 
 ## Kümmere dich während der Missionen um dein Haustier
