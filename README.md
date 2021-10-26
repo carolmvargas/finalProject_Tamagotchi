@@ -1,11 +1,14 @@
 # finalProject_Tamagotchi
 
+<<<<<<< HEAD
 Caroline
 Mauro
 Siddik
 
 # finalProject_Tamagotchi
 
+=======
+>>>>>>> main
 Caroline  
 Mauro  
 s-polat  
@@ -37,4 +40,8 @@ s-polat
 
 * Vierte Mission: Pflege, Schlaf, Vitamin, füttern (mit bestimmtem Essen und Menge). Gesundheit muss GUT sein.
 
+<<<<<<< HEAD
 * Fünfte Mission: Füttern (mit bestimmtem Essen und Menge), Schlaf, Vitamin, spielen, trinken. Gesundheit muss GROSSARTIG und Stimmung ÜBERGLÜCKLICH sein.
+=======
+* Fünfte Mission: Füttern (mit bestimmtem Essen und Menge), Schlaf, Vitamin, spielen, trinken. Gesundheit muss GROSSARTIG und Stimmung ÜBERGLÜCKLICH sein.
+>>>>>>> main
