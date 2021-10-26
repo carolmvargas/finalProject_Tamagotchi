@@ -15,6 +15,7 @@ _text_
 * Das Spiel wird von dem Spieler gewonnen, der zuerst alle Missionen beenden kann.
 * Das Spiel wird insgesamt 10 Missionen haben
 * Die Missionen sind geheim, aber es werden Hinweise gegeben, damit der Spieler sie abschließen kann 
+* Die Missionen bestanden darin, die Interaktionsaktivitäten mit dem Haustier zu kombinieren. Zum Beispiel Futtern, Pflege usw. 
 
 * item1
 * item2
