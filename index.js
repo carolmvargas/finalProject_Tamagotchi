@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync')();
+/* const prompt = require('prompt-sync')();
 
 console.log("Geben Sie ein Wert für a");
 const a = Number (prompt('a? '));
@@ -9,4 +9,4 @@ const b = Number(prompt('b? '));
 // Gib den Wert von b zurück in das Terminal
 
 console.log("Die Summe von a + b:");
-console.log(a + b);
+console.log(a + b); */
