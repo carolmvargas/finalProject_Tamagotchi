@@ -23,5 +23,13 @@ s-polat
 * Jedes Tier hat seine eigenen Missionen. 
 * Nahrung: Fleisch, Fisch, Karotten, Kartoffeln, Kohl, Apfel.
 
-* Erste Mission: Geh mit deinem Tier spazieren, füttere und gib ihm zu trinken. Um die Mission abzuschließen, musst du ihm genau das Essen geben, das er braucht.
-* Zweite Mission: Pflege, schlafen, spielen.
+## Missionen
+* Erste Mission: Laufen, füttern und trinken.
+
+* Zweite Mission: Pflege, Schlaf, spielen, füttern (mit bestimmtem Essen).
+
+* Dritte Mission: Füttern (mit bestimmtem Essen), trinken, spielen, Stimung muss GLÜCKLICH sein.
+
+* Vierte Mission: Pflege, Schlaf, Vitamin, füttern (mit bestimmtem Essen und Menge) Gesundheit muss GUT sein.
+
+* Fünfte Mission: Füttern (mit bestimmtem Essen und Menge), Schlaf, Vitamin, spielen, trinken, Gesundheit muss GROSSARTIG und Stimmung ÜBERGLÜCKLICH sein.
