@@ -20,5 +20,8 @@ _text_
 * Wenn Hunger auf Stufe 10 ist, verliert er Gesundheit.
 * Wenn Durst auf Stufe 10 ist, verliert er Gesundheit.
 * Wenn die Gesundheit null ist, stirbt er.
+
+* Das Spiel wird 3 Haustiere haben (Katze, Hund und Kaninchen).
+*
 * item1
 * item2
