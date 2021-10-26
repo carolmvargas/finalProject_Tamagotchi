@@ -21,14 +21,11 @@ class Pet {
         this.gesundheit=5,
         this.durst=5,
         this.arr=[]
-        
     }
     
-
     addHappyness(value){
         const sum=this.happyness+value
-        this.happyness=(sum>10?10:sum) // ternary 
-
+        this.happyness=(sum>10?10:sum) 
     }
 
     reduceHappyness(value){
@@ -88,31 +85,47 @@ class Pet {
     }
 
     feed(food){
+        let energy
         if((this.typeOfPet.toLowerCase()=='katze') && food==='apfel'){
-            food.energy=1
+            energy=1
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='apfel'){
+            energy=1
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='apfel'){
+            energy=3
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='kartoffel'){
+            energy=1
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='kartoffel'){
+            energy=3
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='kartoffel'){
+            energy=2
         }
-        this.reduceHunger(food.energy)
+        this.reduceHunger(energy)
         if (food.sweet==false){
             this.reduceHappyness(1);
         }
-
-        console.log(`${this.name} hat ${food.name} gegessen`);
+            console.log(`${this.name} hat ${food} gegessen`);
     }
 
     play(){
-        if(this.hungry>=8){
-            console.log(`${this.name} ist zu hungrig zum spielen`);
-            return;    
+        if(this.hungry >= 9){
+            console.log(`${this.name} ist zu hungrig zu spielen`);
+            // return;    
         }
+        else if (this.durst >= 9) {
+            console.log(`${this.name} ist zu durstig zu spielen`);
+        } else {
         this.addHappyness(2)
         this.addHunger(3)
+        this.addDurst(2)
         console.log(`${this.name} hat gespielt!`);
+    }
     }
     sleep(){
         this.reduceHappyness(5)
         this.addHunger(2)
         console.log(`${this.name} hat geschlafen!`);
     }
+
     pflege(){
         this.addHappyness(2)
         this.addGesund(1)
@@ -121,27 +134,65 @@ class Pet {
     
 }
 
-const cat =new Pet('mami')
+const hund =new Pet('mami', 'hunde')
 
+hund.feed('apfel');
+console.log(hund);
+hund.play()
+console.log(hund);
+hund.play()
+console.log(hund);
+hund.printStatus()
+hund.play()
+console.log(hund);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cat.addHappyness(3)
 console.log(cat);
-
+cat.feed('apfel');
+console.log(cat);
 cat.addHappyness(3)
 console.log(cat);
-cat.addHappyness(3)
-console.log(cat);
-cat.printStatus()
+cat.printStatus() */
 
-class Food{
-    constructor(name, energy){
+/* class Food{
+    constructor(name){
         this.name=name
-        this.energy=energy  
+        
     }
 
-}
-
-const apple= new Food('apple', 1)
-const bread= new Food('bread', 3)
+} */
+/* 
+const apfel= new Food('apfel', 1)
+const kartoffel= new Food('kartoffel', 3)
 const fisch= new Food('fisch', 3)
 const carotte= new Food('carotte', 2)
 const fleisch= new Food('fleisch', 3)
-
+ */
