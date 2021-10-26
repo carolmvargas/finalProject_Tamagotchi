@@ -23,4 +23,5 @@ s-polat
 * Jedes Tier hat seine eigenen Missionen. 
 * Nahrung: Fleisch, Fisch, Karotten, Kartoffeln, Kohl, Apfel.
   
+    
 * Erste Mission: Geh mit deinem Tier spazieren, füttere es und trinke es.
