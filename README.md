@@ -22,6 +22,5 @@ s-polat
 * Das Spiel wird 3 Haustiere haben (Katze, Hund und Kaninchen).
 * Jedes Tier hat seine eigenen Missionen. 
 * Nahrung: Fleisch, Fisch, Karotten, Kartoffeln, Kohl, Apfel.
-  
-    
-* Erste Mission: Geh mit deinem Tier spazieren, füttere es und trinke es.
+
+* Erste Mission: Geh mit deinem Tier spazieren, füttere und gib ihm zu trinken.
