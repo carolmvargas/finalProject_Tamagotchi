@@ -1,5 +1,5 @@
 # finalProject_Tamagotchi
 
-Caroline
-Mauro
-s-polat
+Caroline  
+Mauro  
+s-polat  
