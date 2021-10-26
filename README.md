@@ -23,5 +23,5 @@ _text_
 
 * Das Spiel wird 3 Haustiere haben (Katze, Hund und Kaninchen).
 * Jedes Tier hat seine eigenen Missionen. 
-* item1
+* Nahrung: Fleisch, Fisch, Karotten, Kartoffeln, Kohl, Apfel.
 * item2
