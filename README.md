@@ -16,6 +16,8 @@ _text_
 * Das Spiel wird insgesamt 10 Missionen haben.
 * Die Missionen sind geheim, aber es werden Hinweise gegeben, damit der Spieler sie abschließen kann. 
 * Die Missionen bestanden darin, die Interaktionsaktivitäten mit dem Haustier zu kombinieren. Zum Beispiel Futtern, Pflege, usw. 
-
+* Wenn die Gesundheit zu niedrig ist, stirbt er.
+* Wenn Hunger auf Stufe 10 ist, verliert er Gesundheit.
+* Wenn der Durst bei 10 liegt, verliert er Gesundheit.
 * item1
 * item2
