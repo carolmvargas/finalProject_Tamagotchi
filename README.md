@@ -18,6 +18,6 @@ _text_
 * Die Missionen bestanden darin, die Interaktionsaktivitäten mit dem Haustier zu kombinieren. Zum Beispiel Futtern, Pflege, usw. 
 * Wenn die Gesundheit null ist, stirbt er.
 * Wenn Hunger auf Stufe 10 ist, verliert er Gesundheit.
-* Wenn der Durst bei 10 liegt, verliert er Gesundheit.
+* Wenn der Durst auf Stufe 10 ist, verliert er Gesundheit.
 * item1
 * item2
