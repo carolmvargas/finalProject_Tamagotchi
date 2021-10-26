@@ -1,4 +1,5 @@
 
+
 /* const prompt = require('prompt-sync')();
 
 console.log("Geben Sie ein Wert für a");
@@ -12,6 +13,8 @@ const b = Number(prompt('b? '));
 console.log("Die Summe von a + b:");
 console.log(a + b); */
 
+
+
 class Pet {
     constructor(name, typeOfPet){
         this.name=name,
@@ -22,7 +25,7 @@ class Pet {
         this.durst=5,
         this.arr=[]
     }
-    
+
     addHappyness(value){
         const sum=this.happyness+value
         this.happyness=(sum>10?10:sum) 
@@ -65,10 +68,14 @@ class Pet {
     printStatus(){
         let mood;
         let hunger;
+        let gesund;
+        let durst;
         if (this.happyness<=2){
             mood='wütend'
+            this.reduceGesund(2)
         } else if(this.happyness<=5){
             mood='traurig'
+            this.reduceGesund(1)
         }else if(this.happyness<=8){
             mood='froh'
         }else if(this.happyness<=10){
@@ -79,31 +86,60 @@ class Pet {
         } else{
             hunger='Hunger'
         }
-        
+        if(this.gesundheit>3){
+            gesund = 'ist gesund'
+        }else {
+            gesund = 'ist nicht gesund'
+        }
+        if(this.durst<=3){
+          durst = 'keinen Durst'
+        }else if (this.durst>=8) {
+          this.reduceGesund(1)
+        } else {
+          durst = 'Durst'
+        }
+      
 
-        console.log(`${this.name} ist ${mood} und hat ${hunger}`);
+        console.log(`${this.name} ist ${mood}, hat ${hunger} und hat ${durst}, ${gesund}`);
     }
 
     feed(food){
-        let energy
+        
         if((this.typeOfPet.toLowerCase()=='katze') && food==='apfel'){
-            energy=1
+            this.reduceHunger(1); this.reduceHappyness(1);
         }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='apfel'){
-            energy=1
+            this.reduceHunger(1); 
         }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='apfel'){
-            energy=3
+            this.reduceHunger(2); this.addHappyness(1)
         }else if((this.typeOfPet.toLowerCase()=='katze') && food==='kartoffel'){
-            energy=1
+            this.reduceHunger(1); this.reduceHappyness(1)
         }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='kartoffel'){
-            energy=3
+            this.reduceHunger(1); this.reduceHappyness(1)
         }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='kartoffel'){
-            energy=2
+            this.reduceHunger(2); this.addHappyness(1)
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='fisch'){
+            this.reduceHunger(3); this.addHappyness(1)
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='fisch'){
+            this.reduceHunger(2);
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='fisch'){
+            this.reduceHunger(1); this.reduceGesund(1); this.reduceHappyness(1)
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='fleisch'){
+            this.reduceHunger(2);
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='fleisch'){
+            this.reduceHunger(3); this.addHappyness(1)
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='fleisch'){
+            this.reduceHunger(1); this.reduceGesund(1); this.reduceHappyness(1)
+        }else if((this.typeOfPet.toLowerCase()=='katze') && food==='karotte'){
+            this.reduceHunger(1); this.reduceHappyness(1)
+        }else if ((this.typeOfPet.toLowerCase()=='hunde') && food==='karotte'){
+            this.reduceHunger(1); this.reduceHappyness(1);
+        }else if ((this.typeOfPet.toLowerCase()=='kaninchen') && food==='karotte'){
+            this.reduceHunger(3); this.addHappyness(1)
         }
-        this.reduceHunger(energy)
-        if (food.sweet==false){
-            this.reduceHappyness(1);
-        }
+
             console.log(`${this.name} hat ${food} gegessen`);
+
+
     }
 
     play(){
@@ -129,8 +165,25 @@ class Pet {
     pflege(){
         this.addHappyness(2)
         this.addGesund(1)
+
         console.log(`${this.name} wurde gepflegt!`);
     }
+    addVitamin(){
+      this.addGesund(1);
+      console.log(`${this.name} hat Vitamin genommen!`)
+      this.printStatus(this.name);
+    }
+
+    mission1() {
+      let status = 'blabla'
+      let ziel = 'blabla'
+      if(status === ziel) {
+        console.log('Mission 1 geschafft');
+      } else {
+        console.log('nicht geschafft')
+      }
+    }
+  
     
 }
 
@@ -148,29 +201,9 @@ console.log(hund);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//carol
+hund.addVitamin();
+hund.mission1();
 
 
 
@@ -188,11 +221,11 @@ cat.printStatus() */
         
     }
 
-} */
-/* 
+}
 const apfel= new Food('apfel', 1)
 const kartoffel= new Food('kartoffel', 3)
 const fisch= new Food('fisch', 3)
 const carotte= new Food('carotte', 2)
 const fleisch= new Food('fleisch', 3)
  */
+
