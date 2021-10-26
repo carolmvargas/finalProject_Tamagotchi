@@ -4,7 +4,6 @@ Caroline
 Mauro  
 s-polat  
 
-**dghshjsdhjskjsjdsjsdhsjdjsd**
 # Haustierpflege: Die Missionen 
 ## Kümmere dich während der Missionen um dein Haustier
 
@@ -30,6 +29,6 @@ s-polat
 
 * Dritte Mission: Füttern (mit bestimmtem Essen), trinken, spielen, Stimung muss GLÜCKLICH sein.
 
-* Vierte Mission: Pflege, Schlaf, Vitamin, füttern (mit bestimmtem Essen und Menge) Gesundheit muss GUT sein.
+* Vierte Mission: Pflege, Schlaf, Vitamin, füttern (mit bestimmtem Essen und Menge). Gesundheit muss GUT sein.
 
-* Fünfte Mission: Füttern (mit bestimmtem Essen und Menge), Schlaf, Vitamin, spielen, trinken, Gesundheit muss GROSSARTIG und Stimmung ÜBERGLÜCKLICH sein.
+* Fünfte Mission: Füttern (mit bestimmtem Essen und Menge), Schlaf, Vitamin, spielen, trinken. Gesundheit muss GROSSARTIG und Stimmung ÜBERGLÜCKLICH sein.
