@@ -109,32 +109,49 @@ class Pet {
            
        }
     } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "apfel") {
+        if(vorrat[food]>0) {
+            vorrat[food]--;
+            console.log(vorrat[food]);}
       this.reduceHunger(1);
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "apfel"
     ) {
+        if(vorrat[food]>0) {
+            vorrat[food]--;
+            console.log(vorrat[food]);}
       this.reduceHunger(2);
       this.addHappyness(1);
     } else if (
       this.typeOfPet.toLowerCase() == "katze" &&
       food === "kartoffel"
     ) {
+        if(vorrat[food]>0) {
+            vorrat[food]--;
+            console.log(vorrat[food]);}
       this.reduceHunger(1);
       this.reduceHappyness(1);
     } else if (
       this.typeOfPet.toLowerCase() == "hunde" &&
       food === "kartoffel"
-    ) {
+    ) { if(vorrat[food]>0) {
+        vorrat[food]--;
+        console.log(vorrat[food]);}
       this.reduceHunger(1);
       this.reduceHappyness(1);
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "kartoffel"
-    ) {
+    ) { 
+        if(vorrat[food]>0) {
+            vorrat[food]--;
+            console.log(vorrat[food]);}
       this.reduceHunger(2);
       this.addHappyness(1);
     } else if (this.typeOfPet.toLowerCase() == "katze" && food === "fisch") {
+        if(vorrat[food]>0) {
+            vorrat[food]--;
+            console.log(vorrat[food]);}
       this.reduceHunger(3);
       this.addHappyness(1);
     } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "fisch") {
