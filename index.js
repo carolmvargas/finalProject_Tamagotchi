@@ -13,6 +13,7 @@ console.log(a + b); */
 const vorrat= {'apfel':5, 'kartoffel':5, 'fleisch':5, 'fisch':5, 'karotte':5};
 class Pet {
   constructor(name, typeOfPet) {
+
     (this.name = name), (this.typeOfPet = typeOfPet);
     (this.happyness = 5),
       (this.hungry = 5),
@@ -56,6 +57,8 @@ class Pet {
   reduceGesund(value) {
     const diff = this.gesundheit - value;
     this.gesundheit = diff <= 0 ? 0 : diff;
+
+    
   }
 
   printStatus() {
@@ -64,37 +67,54 @@ class Pet {
     let gesund;
     let durst;
     if (this.happyness <= 2) {
-      mood = "wütend";
-      this.reduceGesund(2);
+
+      mood = 'WÜTEND'
+      this.reduceGesund(1)
+      console.log(`ACHTUNG! Wenn ${this.name} wütend ist, verliert ${this.name} Gesundheit`)
     } else if (this.happyness <= 5) {
-      mood = "traurig";
-      this.reduceGesund(1);
+      mood = 'TRAURIG'
+
     } else if (this.happyness <= 8) {
-      mood = "froh";
+      mood = 'FROH'
     } else if (this.happyness <= 10) {
-      mood = "uber glücklich";
+      mood = 'UBER GLÜCKLICH'
     }
     if (this.hungry <= 5) {
-      hunger = "keinen Hunger";
+      hunger = 'keinen Hunger'
+    } else if (this.hungry >= 8) {
+      this.reduceGesund(1)
+      console.log(`ACHTUNG! Wenn ${this.name} hungrig ist, verliert ${this.name} Gesundheit`)
+      hunger = 'Hunger'
     } else {
-      hunger = "Hunger";
+      hunger = 'Hunger'
     }
-    if (this.gesundheit > 3) {
-      gesund = "ist gesund";
+   
+    if(this.gesundheit === 0) {
+      gesund = 'ist gestorben --->GAME OVER<---'
+    } else if (this.gesundheit <= 2) {
+      gesund = 'ist nicht gesund'
+      console.log(`${this.name} ist krank! Gib ihm Vitamin!`)
+    } else if (this.gesundheit >= 3 && this.gesundheit < 5) {
+      gesund = 'ist nicht gesund'
     } else {
-      gesund = "ist nicht gesund";
+      gesund = 'ist gesund'
     }
-    if (this.durst <= 3) {
-      durst = "keinen Durst";
+    if (this.durst <= 2) {
+      durst = 'keinen Durst'
     } else if (this.durst >= 8) {
-      this.reduceGesund(1);
+      this.reduceGesund(1)
+      console.log(`ACHTUNG! Wenn ${this.name} durstig ist, verliert ${this.name} Gesundheit`)
+      durst = 'Durst'
     } else {
-      durst = "Durst";
+      durst = 'Durst'
     }
-
-    console.log(
-      `${this.name} ist ${mood}, hat ${hunger} und hat ${durst}, ${gesund}`
-    );
+    /* if(this.gesundheit === 0) {
+      console.log('GAME OVER')
+    } else { */
+      console.log(`Status: ${this.name} ist ${mood}, hat ${hunger} und hat ${durst}, ${gesund}.`);
+      console.log('----------------------------------------------------------------------------')
+    
+    
   }
 
   feed(food) {
@@ -190,66 +210,64 @@ class Pet {
     }
 
     console.log(`${this.name} hat ${food} gegessen`);
+
   }
 
   play() {
     if (this.hungry >= 9) {
       console.log(`${this.name} ist zu hungrig zu spielen`);
-      // return;
-    } else if (this.durst >= 9) {
+      // return;    
+    }
+    else if (this.durst >= 9) {
       console.log(`${this.name} ist zu durstig zu spielen`);
     } else {
-      this.addHappyness(2);
-      this.addHunger(3);
-      this.addDurst(2);
+      this.addHappyness(2)
+      this.addHunger(3)
+      this.addDurst(2)
       console.log(`${this.name} hat gespielt!`);
+      this.printStatus(this.name)
     }
   }
   sleep() {
-    this.reduceHappyness(5);
-    this.addHunger(2);
+    this.reduceHappyness(5)
+    this.addHunger(2)
     console.log(`${this.name} hat geschlafen!`);
+    this.printStatus(this.name)
   }
 
   pflege() {
-    this.addHappyness(2);
-    this.addGesund(1);
-
+    this.addHappyness(2)
+    this.addGesund(1)
     console.log(`${this.name} wurde gepflegt!`);
+    this.printStatus(this.name)
   }
   addVitamin() {
-    this.addGesund(1);
-    console.log(`${this.name} hat Vitamin genommen!`);
-    this.printStatus(this.name);
+    this.addGesund(2);
+    this.addDurst(1)
+    this.addHappyness(2)
+    console.log(`${this.name} hat Vitamin genommen!`)
+    this.printStatus(this.name)
   }
 
-  mission1() {
-    let status = "blabla";
-    let ziel = "blabla";
-    if (status === ziel) {
-      console.log("Mission 1 geschafft");
-    } else {
-      console.log("nicht geschafft");
+  trinken(getranke) {
+    if (getranke === 'wasser') {
+      this.reduceDurst(2);
+      console.log(`${this.name} hat ${getranke} getrunken!`)
+      this.printStatus(this.name)
     }
   }
+  mission1() {
+    /* let status = 'blabla'
+    let ziel = 'blabla'
+    if(status === ziel) */
+    if (this.happyness > 7 & this.gesundheit > 6) {
+      console.log('Mission 1 geschafft');
+    } else {
+      console.log('Mission 1 nicht geschafft')
+    }
+    console.log('Bist du bereit für nächste Mission?');
+  }
 }
-
-/* const pet= new Pet('as', 'katze')
-console.log(pet);
-pet.feed('apfel');
-pet.feed('apfel');
-pet.feed('apfel');
-pet.feed('apfel');
-pet.feed('apfel');
-pet.feed('apfel'); */
-
-let typeOfTier;
-let name;
-let type;
-
-
-
-
 
 while (true ) {
     console.log('welche tiere möchtest du haben? \n \n A)eine Katze. B)ein Hund oder C)ein Kaninchen.\n \n Gib eine Buchstabe A, B oder C? \n' );
@@ -334,6 +352,70 @@ while(exit=='n' && !tier.gesundheit<=0){
 }
 console.log(`GAME OVER ${tier.name} ist leider gestorben`);
 
+const hund = new Pet('Mami', 'hunde')
+
+hund.feed('apfel');
+console.log(hund);
+hund.play()
+console.log(hund);
+hund.play()
+console.log(hund);
+hund.printStatus()
+hund.play()
+console.log(hund);
+
+
+
+//carol
+hund.addVitamin();
+hund.mission1();
+hund.feed('fleisch')
+console.log(hund);
+hund.addVitamin();
+console.log(hund);
+hund.trinken('wasser');
+console.log(hund)
+
+hund.feed('fisch')
+hund.sleep()
+hund.addVitamin()
+hund.play()
+hund.play()
+hund.feed('fleisch')
+hund.feed('fisch')
+hund.feed('fisch')
+hund.trinken('wasser')
+
+console.log(hund);
+
+hund.feed('fleisch')
+hund.trinken('wasser')
+hund.trinken('wasser') /// status 
+hund.sleep();
+hund.addVitamin()
+hund.play()
+hund.addVitamin()
+
+hund.sleep()
+hund.trinken('wasser')
+hund.play()
+hund.feed('fleisch')
+hund.trinken('wasser')
+hund.trinken('wasser')
+hund.trinken('wasser')
+hund.addVitamin();
+hund.feed('fleisch')
+hund.feed('apfel')
+hund.feed('apfel')
+hund.feed('apfel')
+hund.sleep() 
+hund.sleep()
+hund.sleep()
+hund.sleep()
+hund.sleep()
+console.log(hund);
+
+
 
 /* cat.addHappyness(3)
 console.log(cat);
@@ -346,7 +428,7 @@ cat.printStatus() */
 /* class Food{
     constructor(name){
         this.name=name
-        
+
     }
 
 }
@@ -355,4 +437,4 @@ const kartoffel= new Food('kartoffel', 3)
 const fisch= new Food('fisch', 3)
 const carotte= new Food('carotte', 2)
 const fleisch= new Food('fleisch', 3)
- */
+
