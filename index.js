@@ -299,7 +299,7 @@ name = prompt(`Wie heißt dein Tier?`);
 console.log(` 
             \\o/
              I
-            / \\  Yuhuuu du hast jetzt ein ${type} 
+            / \\  Yuhuuu du hast jetzt ein ${type.toUpperCase()} 
             `);
 const tier = new Pet(name, type);
 console.log(tier);
@@ -317,27 +317,34 @@ while(exit!=='q' && !tier.gesundheit<=0){
     exit='q'
     
    }else if (ergebniss.toLowerCase()==='b'){
+     while(true){
        console.log(`Womit möchtest du ${tier.name} füttern? \n A) fleisch B) fisch C) karotte \n D) kartoffel E) apfel`);
        let essen= prompt();
        if(essen.toLowerCase()==='a'){  
         tier.feed('fleisch')
         tier.printStatus()
         console.log(tier.gesundheit);
+        break;
        }else if(essen.toLowerCase()==='b'){
         tier.feed('fisch')
         tier.printStatus()
+        break;
        }else if(essen.toLowerCase()==='c'){
         tier.feed('karotte')
         tier.printStatus()
+        break;
        }else if(essen.toLowerCase()==='d'){
         tier.feed('kartoffel')
         tier.printStatus()
+        break;
        }else if(essen.toLowerCase()==='e'){
         tier.feed('apfel')
         tier.printStatus()
+        break;
        }else{
            console.log(`Du hast falsche Buchstabe gegeben`);
        }
+      }
    }else if(ergebniss.toLowerCase()==='c'){
     
     tier.sleep()
