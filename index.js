@@ -318,6 +318,7 @@ while (true) {
 }
 
 name = prompt(`Wie heißt dein Tier?`);
+
 let figur;
 if(type === 'hund') {
   figur = `   / \\__
@@ -380,8 +381,8 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
     } else if (ergebniss.toLowerCase() === 'd') {
 
 
-        console.log(`trink method soll hinfügen`);
-        tier.printStatus()
+         tier.trinken()
+         tier.printStatus()
     } else if (ergebniss.toLowerCase() === 'e') {
 
         tier.addVitamin()
