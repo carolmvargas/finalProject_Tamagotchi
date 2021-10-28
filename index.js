@@ -1,17 +1,5 @@
 const prompt = require("prompt-sync")();
 
-/*console.log("Geben Sie ein Wert für a");
-
-const a = Number (prompt('a? '));
-// muss den Wert von a im Terminal angeben
-
-console.log("Geben Sie jetzt ein Wert für b");
-const b = Number(prompt('b? '));
-// Gib den Wert von b zurück in das Terminal
-
-console.log("Die Summe von a + b:");
-console.log(a + b); */
-
 const vorrat= {'apfel':5, 'kartoffel':5, 'fleisch':5, 'fisch':5, 'karotte':5, 'getranke':5, 'vitamin':5};
 
 class Pet {
@@ -21,8 +9,8 @@ class Pet {
         (this.happyness = 5),
         (this.hungry = 5),
         (this.gesundheit = 5),
-        (this.durst = 5),
-        (this.arr = []);
+        (this.durst = 5)
+        
     }
 
     addHappyness(value) {
@@ -287,7 +275,7 @@ class Pet {
     }
 }
 
-
+}
 while (true) {
     console.log('Welches Tier möchtest Du haben? \n \n(A) Katze | (B) Hund | (C) Kaninchen\n \nWähle bitte einen Buchstaben aus: A, B oder C? \n');
     typeOfTier = prompt(``);
@@ -353,27 +341,34 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
 
         tier.printStatus()
     } else if (ergebniss.toLowerCase() === 'b') {
+      while(true){
         console.log(`-------------------------------------------------------------------\nWomit möchtest du ${tier.name} füttern? \n\n(A) Fleisch | (B) Fisch | (C) Karotte \n(D) Kartoffel | (E) Apfel`);
         let essen = prompt();
         if (essen.toLowerCase() === 'a') {
             tier.feed('fleisch')
             tier.printStatus()
+            break;
             console.log(tier.gesundheit);
         } else if (essen.toLowerCase() === 'b') {
             tier.feed('fisch')
             tier.printStatus()
+            break;
         } else if (essen.toLowerCase() === 'c') {
             tier.feed('karotte')
             tier.printStatus()
+            break;
         } else if (essen.toLowerCase() === 'd') {
             tier.feed('kartoffel')
             tier.printStatus()
+            break;
         } else if (essen.toLowerCase() === 'e') {
             tier.feed('apfel')
             tier.printStatus()
+            break;
         } else {
             console.log(`Opss! Du hast einen falschen Buchstaben ausgewählt.`);
         }
+      }
     } else if (ergebniss.toLowerCase() === 'c') {
 
         tier.sleep()
