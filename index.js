@@ -358,7 +358,6 @@ const hund = new Pet('Mami', 'hunde')
 
 const katze = new Pet('Mia', 'katze')
 
-
 console.log('\\   /\\\\')
 console.log(' ) (  *)')
 console.log('(  /  )');
