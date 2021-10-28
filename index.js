@@ -1,4 +1,5 @@
-const prompt = require("prompt-sync")();
+import ps from "prompt-sync";
+const prompt = ps();
 
 const vorrat = {
   apfel: 5,
@@ -123,101 +124,154 @@ class Pet {
     if (this.typeOfPet.toLowerCase() == "katze" && food === "apfel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        //console.log(vorrat);
         this.reduceHunger(1);
         this.reduceHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
     } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "apfel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        //console.log(vorrat[food]);
+        this.reduceHunger(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-      this.reduceHunger(1);
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "apfel"
     ) {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        //console.log(vorrat[food]);
+        this.reduceHunger(2);
+        this.addHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-      this.reduceHunger(2);
-      this.addHappyness(1);
     } else if (
       this.typeOfPet.toLowerCase() == "katze" &&
       food === "kartoffel"
     ) {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        //console.log(vorrat[food]);
+        this.reduceHunger(1);
+        this.reduceHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-      this.reduceHunger(1);
-      this.reduceHappyness(1);
     } else if (
       this.typeOfPet.toLowerCase() == "hunde" &&
       food === "kartoffel"
     ) {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        // console.log(vorrat[food]);
+        this.reduceHunger(1);
+        this.reduceHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-      this.reduceHunger(1);
-      this.reduceHappyness(1);
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "kartoffel"
     ) {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        //console.log(vorrat[food]);
+        this.reduceHunger(2);
+        this.addHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-      this.reduceHunger(2);
-      this.addHappyness(1);
     } else if (this.typeOfPet.toLowerCase() == "katze" && food === "fisch") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
-        //console.log(vorrat[food]);
+        this.reduceHunger(3);
+        this.addHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-      this.reduceHunger(3);
-      this.addHappyness(1);
     } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "fisch") {
-      this.reduceHunger(2);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(2);
+        vorrat[food]--;
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "fisch"
     ) {
-      this.reduceHunger(1);
-      this.reduceGesund(1);
-      this.reduceHappyness(1);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(1);
+        this.reduceGesund(1);
+        this.reduceHappyness(1);
+        vorrat[food]--;
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (this.typeOfPet.toLowerCase() == "katze" && food === "fleisch") {
-      this.reduceHunger(2);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(2);
+        vorrat[food]--;
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "fleisch") {
-      this.reduceHunger(3);
-      this.addHappyness(1);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(3);
+        this.addHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "fleisch"
     ) {
-      this.reduceHunger(1);
-      this.reduceGesund(1);
-      this.reduceHappyness(1);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(1);
+        this.reduceGesund(1);
+        this.reduceHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (this.typeOfPet.toLowerCase() == "katze" && food === "karotte") {
-      this.reduceHunger(1);
-      this.reduceHappyness(1);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(1);
+        this.reduceHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "karotte") {
-      this.reduceHunger(1);
-      this.reduceHappyness(1);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(1);
+        this.reduceHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     } else if (
       this.typeOfPet.toLowerCase() == "kaninchen" &&
       food === "karotte"
     ) {
-      this.reduceHunger(3);
-      this.addHappyness(1);
+      if (vorrat[food] > 0) {
+        this.reduceHunger(3);
+        this.addHappyness(1);
+        console.log(`${this.name} hat ${food} gegessen`);
+      } else {
+        console.log(`Vorrat hat kein(en) ${food} mehr!`);
+      }
     }
-
-    console.log(`${this.name} hat ${food} gegessen`);
   }
 
   play() {
@@ -236,7 +290,7 @@ class Pet {
   }
 
   sleep() {
-    this.reduceHappyness(5);
+    this.reduceHappyness(2);
     this.addHunger(2);
     console.log(`${this.name} hat geschlafen!`);
     //this.printStatus(this.name)
@@ -249,11 +303,15 @@ class Pet {
     //this.printStatus(this.name)
   }
   addVitamin() {
-    this.addGesund(2);
-    this.addDurst(1);
-    this.addHappyness(2);
-    console.log(`${this.name} hat Vitamin genommen!`);
-    //this.printStatus(this.name)
+    if (vorrat["vitamin"] > 0) {
+      this.addGesund(2);
+      this.addDurst(1);
+      this.addHappyness(2);
+      vorrat["vitamin"]--;
+      console.log(`${this.name} hat Vitamin genommen!`);
+    } else {
+     console.log( `Es gibt kein Vitamin mehr`);
+    }
   }
 
   trinken() {
@@ -267,13 +325,14 @@ class Pet {
     }
   }
 }
-
+let type;
+let typeOfTier;
 while (true) {
   console.log(
     "Welches Tier möchtest Du haben? \n \n(A) Katze | (B) Hund | (C) Kaninchen\n \nWähle bitte einen Buchstaben aus: A, B oder C? \n"
   );
   typeOfTier = prompt(``);
-
+  console.clear();
   if (typeOfTier.toLowerCase() === "a") {
     type = "katze";
 
@@ -298,7 +357,7 @@ while (true) {
   }
 }
 
-name = prompt(`Wie heißt dein Tier? `);
+let name = prompt(`Wie heißt dein Tier? `);
 
 let figur;
 let artikel;
@@ -331,6 +390,7 @@ while (exit !== "q" && !tier.gesundheit <= 0) {
   console.log(`\n-------------------------------------------------------------------
     \n Was möchtest Du mit ${tier.name} machen? \n \n(A) spielen | (B) füttern | (C) Schlafen bringen \n(D) Wasser geben | (E) Vitamin geben | (F) pflegen | (Q) Quit \n `);
   let ergebniss = prompt();
+  console.clear();
   if (ergebniss.toLowerCase() === "a") {
     tier.play();
     tier.printStatus();
@@ -342,26 +402,37 @@ while (exit !== "q" && !tier.gesundheit <= 0) {
         `-------------------------------------------------------------------\nWomit möchtest du ${tier.name} füttern? \n\n(A) Fleisch | (B) Fisch | (C) Karotte \n(D) Kartoffel | (E) Apfel`
       );
       let essen = prompt();
+      console.clear();
       if (essen.toLowerCase() === "a") {
         tier.feed("fleisch");
+        console.log(`Fleisch bleibt: ${vorrat['fleisch']}`);
         tier.printStatus();
+        
         break;
         console.log(tier.gesundheit);
       } else if (essen.toLowerCase() === "b") {
         tier.feed("fisch");
+        console.log(`Fisch bleibt: ${vorrat['fisch']}`);
         tier.printStatus();
+       
         break;
       } else if (essen.toLowerCase() === "c") {
         tier.feed("karotte");
+        console.log(`Karotte bleibt: ${vorrat['karotte']}`);
         tier.printStatus();
+       
         break;
       } else if (essen.toLowerCase() === "d") {
         tier.feed("kartoffel");
+        console.log(`Kartoffel bleibt: ${vorrat['kartoffel']}`);
         tier.printStatus();
+        
         break;
       } else if (essen.toLowerCase() === "e") {
         tier.feed("apfel");
+        console.log(`Apfel bleibt: ${vorrat['apfel']}`);
         tier.printStatus();
+        
         break;
       } else {
         console.log(`Opss! Du hast einen falschen Buchstaben ausgewählt.`);
@@ -372,10 +443,14 @@ while (exit !== "q" && !tier.gesundheit <= 0) {
     tier.printStatus();
   } else if (ergebniss.toLowerCase() === "d") {
     tier.trinken();
+    console.log(`Wasser bleibt: ${vorrat['getranke']}`);
     tier.printStatus();
+    
   } else if (ergebniss.toLowerCase() === "e") {
     tier.addVitamin();
+    console.log(`Vitamin bleibt: ${vorrat['vitamin']}`);
     tier.printStatus();
+  
   } else if (ergebniss.toLowerCase() === "f") {
     tier.pflege();
     tier.printStatus();
@@ -389,9 +464,7 @@ let coffin = `   ___
 |   |   |
  \\  |  /
   \\   /
-   \\_/`
-
-
+   \\_/`;
 
 if (exit === "q") {
   console.log(`Bis daannn...`);
