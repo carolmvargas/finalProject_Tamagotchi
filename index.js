@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 /*console.log("Geben Sie ein Wert für a");
->>>>>>> main
+
 const a = Number (prompt('a? '));
 // muss den Wert von a im Terminal angeben
 
@@ -11,13 +11,9 @@ const b = Number(prompt('b? '));
 
 console.log("Die Summe von a + b:");
 console.log(a + b); */
-const vorrat = {
-    'apfel': 5,
-    'kartoffel': 5,
-    'fleisch': 5,
-    'fisch': 5,
-    'karotte': 5
-};
+
+const vorrat= {'apfel':5, 'kartoffel':5, 'fleisch':5, 'fisch':5, 'karotte':5, 'getranke':5, 'vitamin':5};
+
 class Pet {
     constructor(name, typeOfPet) {
 
@@ -127,6 +123,7 @@ class Pet {
 
     }
 
+
     feed(food) {
         if (this.typeOfPet.toLowerCase() == "katze" && food === "apfel") {
             if (vorrat[food] > 0) {
@@ -230,7 +227,6 @@ class Pet {
 
     }
 
-
     play() {
         if (this.hungry >= 9) {
             console.log(`${this.name} ist zu hungrig zu spielen`);
@@ -245,45 +241,49 @@ class Pet {
             this.printStatus(this.name)
         }
     }
-    sleep() {
-        this.reduceHappyness(5)
-        this.addHunger(2)
-        console.log(`${this.name} hat geschlafen!`);
-        this.printStatus(this.name)
-    }
+    
+  sleep() {
+    this.reduceHappyness(5)
+    this.addHunger(2)
+    console.log(`${this.name} hat geschlafen!`);
+    this.printStatus(this.name)
+  }
 
-    pflege() {
-        this.addHappyness(2)
-        this.addGesund(1)
-        console.log(`${this.name} wurde gepflegt!`);
-        this.printStatus(this.name)
-    }
-    addVitamin() {
-        this.addGesund(2);
-        this.addDurst(1)
-        this.addHappyness(2)
-        console.log(`${this.name} hat Vitamin genommen!`)
-        this.printStatus(this.name)
-    }
+  pflege() {
+    this.addHappyness(2)
+    this.addGesund(1)
+    console.log(`${this.name} wurde gepflegt!`);
+    this.printStatus(this.name)
+  }
+  addVitamin() {
+    this.addGesund(2);
+    this.addDurst(1)
+    this.addHappyness(2)
+    console.log(`${this.name} hat Vitamin genommen!`)
+    this.printStatus(this.name)
+  }
 
-    trinken(getranke) {
-        if (getranke === 'wasser') {
-            this.reduceDurst(2);
-            console.log(`${this.name} hat ${getranke} getrunken!`)
-            this.printStatus(this.name)
-        }
+  trinken() {
+   
+   if(vorrat['getranke']>0){
+     vorrat['getranke']--;
+      this.reduceDurst(2);
+      console.log(`${this.name} hat  getrunken!`)
+      this.printStatus(this.name)
+    }else{
+      console.log(`Es gibt kein Wasser mehr`);
     }
-    mission1() {
-        /* let status = 'blabla'
-        let ziel = 'blabla'
-        if(status === ziel) */
-        if (this.happyness > 7 & this.gesundheit > 6) {
-            console.log('Mission 1 geschafft');
-        } else {
-            console.log('Mission 1 nicht geschafft')
+    
+  }
+  mission1() {
+    /* let status = 'blabla'
+    let ziel = 'blabla'
+    if(status === ziel) */
+    if (this.happyness > 7 & this.gesundheit > 6) {
+      console.log('Mission 1 geschafft');
+    } else {
+      console.log('Mission 1 nicht geschafft')
 
-        }
-        console.log('Bist du bereit für die nächste Mission?');
     }
 }
 
@@ -357,6 +357,7 @@ Yuhuuu, Du hast jetzt einen Hund. */
             `); */
 const tier = new Pet(name, type);
 console.log(tier);
+
 let exit = 'n';
 while (exit == 'n' && !tier.gesundheit <= 0) {
     console.log(`\n-------------------------------------------------------------------
@@ -366,6 +367,8 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
     if (ergebniss.toLowerCase() === 'a') {
 
         tier.play()
+
+
         tier.printStatus()
     } else if (ergebniss.toLowerCase() === 'b') {
         console.log(`-------------------------------------------------------------------\nWomit möchtest du ${tier.name} füttern? \n\n(A) Fleisch | (B) Fisch | (C) Karotte \n(D) Kartoffel | (E) Apfel`);
@@ -405,6 +408,7 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
 
         tier.pflege()
         tier.printStatus()
+
     } else {
         console.log(`Opss! Du hast einen falschen Buchstaben ausgewählt.`);
     }
@@ -412,88 +416,4 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
 console.log(`GAME OVER !!! ${tier.name} ist leider gestorben!`);
 
 
-const hund = new Pet('Mami', 'hunde')
-/* 
->>>>>>> main
-hund.feed('apfel');
-console.log(hund);
-hund.play()
-console.log(hund);
-hund.play()
-console.log(hund);
-hund.printStatus()
-hund.play()
-console.log(hund);
 
-
-//carol
-hund.addVitamin();
-hund.mission1();
-hund.feed('fleisch')
-console.log(hund);
-hund.addVitamin();
-console.log(hund);
-hund.trinken('wasser');
-console.log(hund)
-
-hund.feed('fisch')
-hund.sleep()
-hund.addVitamin()
-hund.play()
-hund.play()
-hund.feed('fleisch')
-hund.feed('fisch')
-hund.feed('fisch')
-hund.trinken('wasser')
-
-console.log(hund);
-
-hund.feed('fleisch')
-hund.trinken('wasser')
-hund.trinken('wasser') /// status 
-hund.sleep();
-hund.addVitamin()
-hund.play()
-hund.addVitamin()
-
-hund.sleep()
-hund.trinken('wasser')
-hund.play()
-hund.feed('fleisch')
-hund.trinken('wasser')
-hund.trinken('wasser')
-hund.trinken('wasser')
-hund.addVitamin();
-hund.feed('fleisch')
-hund.feed('apfel')
-hund.feed('apfel')
-hund.feed('apfel')
-hund.sleep() 
-hund.sleep()
-hund.sleep()
-hund.sleep()
-hund.sleep()
-console.log(hund); */
-
-/* cat.addHappyness(3)
-console.log(cat);
-cat.feed('apfel');
-console.log(cat);
-cat.addHappyness(3)
-console.log(cat);
-cat.printStatus() */
-
-/* class Food{
-    constructor(name){
-        this.name=name
-
-    }
-
-}
-const apfel= new Food('apfel', 1)
-const kartoffel= new Food('kartoffel', 3)
-const fisch= new Food('fisch', 3)
-const carotte= new Food('carotte', 2)
-const fleisch= new Food('fleisch', 3)
-
-*/
