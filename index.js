@@ -123,7 +123,6 @@ class Pet {
 
     }
 
-
     feed(food) {
         if (this.typeOfPet.toLowerCase() == "katze" && food === "apfel") {
             if (vorrat[food] > 0) {
@@ -224,6 +223,7 @@ class Pet {
         }
 
         console.log(`${this.name} hat ${food} gegessen`);
+        
 
     }
 
@@ -317,46 +317,27 @@ while (true) {
 
 }
 
-
-/* console.log('\\ /\\\\')
-console.log(' ) ( *)')
-console.log('( / )');
-console.log(' \\(__)|');
-
-console.log(' ()()')
-console.log(' (**)')
-console.log('o( O )');
-
-console.log(' / \\__')
-console.log(' ( @\\___')
-console.log(' / O');
-console.log(' / (____/')
-console.log('/______/ U') 
- */
-
-
-name = prompt(`Wie heißt dein Tier? `);
-console.log("");
-console.log('\\ /\\\\')
-console.log(' ) ( *)')
-console.log('( / )');
-console.log(' \\(__)|');
-console.log("");
-console.log('-------------------------------------------------------------------');
-console.log(`Yuhuuu, Du hast jetzt eine ${type.toUpperCase()}!` );
-console.log('-------------------------------------------------------------------');
-console.log("");
-/* Yuhuuu, Du hast jetzt ein Kaninchen.
-Yuhuuu, Du hast jetzt eine Katze.
-Yuhuuu, Du hast jetzt einen Hund. */
-
-/* console.log(` 
-            \\o/
-             I
-            / \\  Yuhuuu du hast jetzt eine ${type} 
-            `); */
-const tier = new Pet(name, type);
-console.log(tier);
+name = prompt(`Wie heißt dein Tier?`);
+let figur;
+if(type === 'hund') {
+  figur = `   / \\__
+  (    @\\___
+  /         O
+ /    (____/
+/______/  U`
+} else if (type === 'katze') {
+  figur = `\\   /\\\\
+ ) (  *)
+(  /  )
+ \\(__)|`
+} else {
+  figur = ` ()()
+ (**)
+o( O )`
+}
+console.log(`
+${figur}     Yuhuuu du hast jetzt ein ${type}
+`);
 
 let exit = 'n';
 while (exit == 'n' && !tier.gesundheit <= 0) {
@@ -398,6 +379,7 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
         tier.printStatus()
     } else if (ergebniss.toLowerCase() === 'd') {
 
+
         console.log(`trink method soll hinfügen`);
         tier.printStatus()
     } else if (ergebniss.toLowerCase() === 'e') {
@@ -415,5 +397,9 @@ while (exit == 'n' && !tier.gesundheit <= 0) {
 }
 console.log(`GAME OVER !!! ${tier.name} ist leider gestorben!`);
 
+if(exit==='q'){
+  console.log(`Bis daannn...`);
+}else{
+console.log(`GAME OVER ${tier.name} ist leider gestorben`);}
 
 
