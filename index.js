@@ -157,8 +157,6 @@ class Pet {
 
     console.log(`${this.name} hat ${food} gegessen`);
     this.printStatus(this.name)
-
-
   }
 
   play() {
@@ -220,92 +218,23 @@ class Pet {
 }
 
 const hund = new Pet('Mami', 'hunde')
-
-hund.feed('apfel');
-console.log(hund);
-hund.play()
-console.log(hund);
-hund.play()
-console.log(hund);
-hund.printStatus()
-hund.play()
-console.log(hund);
+const katze = new Pet('Mia', 'katze')
 
 
 
-//carol
-hund.addVitamin();
-hund.mission1();
-hund.feed('fleisch')
-console.log(hund);
-hund.addVitamin();
-console.log(hund);
-hund.trinken('wasser');
-console.log(hund)
+console.log('\\   /\\\\')
+console.log(' ) (  *)')
+console.log('(  /  )');
+console.log(' \\(__)|');
 
-hund.feed('fisch')
-hund.sleep()
-hund.addVitamin()
-hund.play()
-hund.play()
-hund.feed('fleisch')
-hund.feed('fisch')
-hund.feed('fisch')
-hund.trinken('wasser')
+console.log(' ()()')
+console.log(' (**)')
+console.log('o( O )');
 
-console.log(hund);
-
-hund.feed('fleisch')
-hund.trinken('wasser')
-hund.trinken('wasser') /// status 
-hund.sleep();
-hund.addVitamin()
-hund.play()
-hund.addVitamin()
-
-hund.sleep()
-hund.trinken('wasser')
-hund.play()
-hund.feed('fleisch')
-hund.trinken('wasser')
-hund.trinken('wasser')
-hund.trinken('wasser')
-hund.addVitamin();
-hund.feed('fleisch')
-hund.feed('apfel')
-hund.feed('apfel')
-hund.feed('apfel')
-hund.sleep() 
-hund.sleep()
-hund.sleep()
-hund.sleep()
-hund.sleep()
-console.log(hund);
+console.log('   / \\__')
+console.log('  (    @\\___')
+console.log('  /         O');
+console.log(' /    (____/')
+console.log('/______/  U')
 
 
-
-
-
-
-
-/* cat.addHappyness(3)
-console.log(cat);
-cat.feed('apfel');
-console.log(cat);
-cat.addHappyness(3)
-console.log(cat);
-cat.printStatus() */
-
-/* class Food{
-    constructor(name){
-        this.name=name
-
-    }
-
-}
-const apfel= new Food('apfel', 1)
-const kartoffel= new Food('kartoffel', 3)
-const fisch= new Food('fisch', 3)
-const carotte= new Food('carotte', 2)
-const fleisch= new Food('fleisch', 3)
- */
