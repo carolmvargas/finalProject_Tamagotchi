@@ -10,7 +10,7 @@ const b = Number(prompt('b? '));
 
 console.log("Die Summe von a + b:");
 console.log(a + b); */
-const vorrat= {'apfel':5, 'kartoffel':5, 'fleisch':5, 'fisch':5, 'karotte':5};
+const vorrat= {'apfel':5, 'kartoffel':5, 'fleisch':5, 'fisch':5, 'karotte':5, 'getranke':5, 'vitamin':5};
 class Pet {
   constructor(name, typeOfPet) {
 
@@ -251,12 +251,17 @@ class Pet {
     this.printStatus(this.name)
   }
 
-  trinken(getranke) {
-    if (getranke === 'wasser') {
+  trinken() {
+   
+   if(vorrat['getranke']>0){
+     vorrat['getranke']--;
       this.reduceDurst(2);
-      console.log(`${this.name} hat ${getranke} getrunken!`)
+      console.log(`${this.name} hat  getrunken!`)
       this.printStatus(this.name)
+    }else{
+      console.log(`Es gibt kein Wasser mehr`);
     }
+    
   }
   mission1() {
     /* let status = 'blabla'
@@ -293,22 +298,41 @@ while (true ) {
   }
 }
 name = prompt(`Wie heißt dein Tier?`);
-console.log(` 
-            \\o/
-             I
-            / \\  Yuhuuu du hast jetzt ein ${type} 
-            `);
+let figur;
+if(type === 'hund') {
+  figur = `   / \\__
+  (    @\\___
+  /         O
+ /    (____/
+/______/  U`
+} else if (type === 'katze') {
+  figur = `\\   /\\\\
+ ) (  *)
+(  /  )
+ \\(__)|`
+} else {
+  figur = ` ()()
+ (**)
+o( O )`
+}
+console.log(`
+${figur}     Yuhuuu du hast jetzt ein ${type}
+`);
 const tier = new Pet(name, type);
 console.log(tier);
 let exit='n';
-while(exit=='n' && !tier.gesundheit<=0){
-    console.log(`\n Was möchtest Du mit ${tier.name} machen? \n A) spielen B) füttern C) schlafen \n D) trinken E) vitamin F) pflegen \n `);
+while(exit!=='q' && !tier.gesundheit<=0){
+    console.log(`\n Was möchtest Du mit ${tier.name} machen? \n A) spielen B) füttern C) schlafen \n D) trinken E) vitamin F) pflegen \n \n oder Q ) quit`);
    let ergebniss= prompt();
-   console.log(ergebniss);
+   
    if(ergebniss.toLowerCase()==='a'){
     
     tier.play()
     tier.printStatus()
+   }else if(ergebniss.toLowerCase()==='q'){
+    
+    exit='q'
+    
    }else if (ergebniss.toLowerCase()==='b'){
        console.log(`Womit möchtest du ${tier.name} füttern? \n A) fleisch B) fisch C) karotte \n D) kartoffel E) apfel`);
        let essen= prompt();
@@ -337,7 +361,7 @@ while(exit=='n' && !tier.gesundheit<=0){
     tier.printStatus()
    }else if(ergebniss.toLowerCase()==='d'){
     
-    console.log(`trink method soll hinfügen`);
+    tier.trinken()
     tier.printStatus()
    }else if(ergebniss.toLowerCase()==='e'){
     
@@ -352,25 +376,18 @@ while(exit=='n' && !tier.gesundheit<=0){
        console.log(`Du hast falsche Buchstabe gegeben`);
    }
 }
+
 console.log(`GAME OVER ${tier.name} ist leider gestorben`);
 
 const hund = new Pet('Mami', 'hunde')
 
 const katze = new Pet('Mia', 'katze')
 
-console.log('\\   /\\\\')
-console.log(' ) (  *)')
-console.log('(  /  )');
-console.log(' \\(__)|');
 
-console.log(' ()()')
-console.log(' (**)')
-console.log('o( O )');
 
-console.log('   / \\__')
-console.log('  (    @\\___')
-console.log('  /         O');
-console.log(' /    (____/')
-console.log('/______/  U')
+if(exit==='q'){
+  console.log(`Bis daannn...`);
+}else{
+console.log(`GAME OVER ${tier.name} ist leider gestorben`);}
 
 
