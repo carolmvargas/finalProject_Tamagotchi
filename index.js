@@ -7,19 +7,19 @@ const vorrat = {
   fleisch: 5,
   fisch: 5,
   karotte: 5,
-  getranke: 5,
-  vitamin: 5,
+  getranke: 10,
+  vitamin: 10,
 };
 
 class Pet {
   constructor(name, typeOfPet) {
     this.name = name,
-    this.typeOfPet = typeOfPet,
-    this.happyness = 5,
-    this.müde=5,
-    this.hungry = 5,
-    this.gesundheit = 5,
-    this.durst = 5
+      this.typeOfPet = typeOfPet,
+      this.happyness = 10,
+      this.müde = 5,
+      this.hungry = 5,
+      this.gesundheit = 10,
+      this.durst = 5
   }
 
   addHappyness(value) {
@@ -84,83 +84,78 @@ class Pet {
       console.log(
         `ACHTUNG! Wenn ${this.name} wütend ist, verliert ${this.name} Gesundheit.`
       );
-    }else if (this.happyness <= 7) {
+    } else if (this.happyness <= 7) {
       mood = "froh";
     } else if (this.happyness <= 9) {
       mood = "glücklich";
-    }else if (this.happyness == 10) {
+    } else if (this.happyness == 10) {
       mood = "überglücklich";
     }
-    if(this.müde<=1){
-      müde='nicht müde'
-    }else if(this.müde>=2){
-      müde='ein bißchen müde'
-    }else if(this.müde>=5){
-      müde='müde';
+    if (this.müde <= 1) {
+      müde = 'nicht müde'
+    } else if (this.müde <= 3) {
+      müde = 'ein bißchen müde'
+    } else if (this.müde <= 7) {
+      müde = 'müde';
       console.log(
         `ACHTUNG! Wenn ${this.name} sehr müde ist, verliert ${this.name} Gesundheit.`
       );
-    }else if(this.müde>8){
-      müde='sehr müde'
+    } else if (this.müde > 8) {
+      müde = 'sehr müde'
       this.reduceGesund(1)
       console.log(
         `ACHTUNG! ${this.name} hat Gesundheit verloren!!`
       );
     }
-
-
-
     if (this.hungry == 0) {
-      hunger = "keinen Hunger";
-    }else if(this.hungry>=1 ){
-      hunger='fast satt'
-    }else if(this.hungry>=3){
-      hunger='ein wenig Hunger'
-    }else if(this.hungry>=5){
-      hunger='noch Hunger'
-    } else if(this.hungry>=7){
-      hunger='Hunger'
+      hunger = 'keinen Hunger';
+    } else if (this.hungry <= 3) {
+      hunger = 'kaum Hunger'
+    } else if (this.hungry <= 5) {
+      hunger = 'ein wenig Hunger'
+    } else if (this.hungry <= 7) {
+      hunger = 'noch Hunger'
+    } else if (this.hungry < 9) {
+      hunger = 'Hunger'
       console.log(
         `ACHTUNG! Wenn ${this.name} zu hungrig ist, verliert ${this.name} Gesundheit.`
       );
-    }else if (this.hungry >= 9) {
+    } else if (this.hungry > 9) {
       this.reduceGesund(1);
       console.log(
         `ACHTUNG! ${this.name} hat Gesundheit verloren!!`
       );
       hunger = " großer Hunger";
-    } 
-
-     if (this.gesundheit <= 1) {
+    }
+    if (this.gesundheit <= 1) {
       gesund = "NICHT GESUND";
       console.log(`${this.name} ist KRANK! Gib ${this.name} Vitamin!`);
-    } else if (this.gesundheit >= 3 && this.gesundheit<=5 ) {
+    } else if (this.gesundheit <= 5) {
       gesund = "NICHT GANZ GESUND";
-    }else if (this.gesundheit >5 && this.gesundheit<=7 ) {
+    } else if (this.gesundheit <= 7) {
       gesund = "GESUND";
-    }else if (this.gesundheit >7 && this.gesundheit<=9 ) {
+    } else if (this.gesundheit <= 9) {
       gesund = "GANZ GESUND";
-    }else if (this.gesundheit >9 ) {
+    } else if (this.gesundheit > 9) {
       gesund = "ABSOLUT GESUND";
-    } 
+    }
     if (this.durst == 0) {
       durst = "keinen Durst";
-    }else if(this.durst>=1){
-      durst='ein bißchen Durst'
-    }else if(this.durst>=5){
-      durst='Durst'
+    } else if (this.durst < 5) {
+      durst = 'ein bißchen Durst'
+    } else if (this.durst <= 6) {
+      durst = 'Durst'
       console.log(
         `ACHTUNG! Wenn ${this.name} zu durstig ist, verliert ${this.name} Gesundheit. \n`
       );
-    }
-     else if (this.durst >= 7) {
+    } else if (this.durst >= 7) {
       this.reduceGesund(1);
       console.log(
         `ACHTUNG! ${this.name} hat Gesundheit verloren!!`
       );
       durst = "großer Durst";
-    } 
-   
+    }
+
     console.log(`Status: ${this.name} ist ${mood}, hat aber ${hunger} und ${durst}. 
         ${this.name} ist ${gesund}!`);
     console.log("");
@@ -327,7 +322,6 @@ class Pet {
   play() {
     if (this.hungry >= 9) {
       console.log(`${this.name} ist zu hungrig zu spielen`);
-      // return;
     } else if (this.durst >= 9) {
       console.log(`${this.name} ist zu durstig zu spielen`);
     } else {
@@ -336,7 +330,6 @@ class Pet {
       this.addHunger(3);
       this.addDurst(2);
       console.log(`${this.name} hat gespielt!`);
-      //this.printStatus(this.name)
     }
   }
 
@@ -345,7 +338,6 @@ class Pet {
     this.reduceHappyness(2);
     this.addHunger(2);
     console.log(`${this.name} hat geschlafen!`);
-    //this.printStatus(this.name)
   }
 
   pflege() {
@@ -354,7 +346,6 @@ class Pet {
     this.addDurst(2);
     this.addHunger(2);
     console.log(`${this.name} wurde gepflegt!`);
-    //this.printStatus(this.name)
   }
   addVitamin() {
     if (vorrat["vitamin"] > 0) {
@@ -364,7 +355,7 @@ class Pet {
       vorrat["vitamin"]--;
       console.log(`${this.name} hat Vitamin genommen!`);
     } else {
-     console.log( `Es gibt kein Vitamin mehr`);
+      console.log(`Es gibt kein Vitamin mehr`);
     }
   }
 
@@ -373,13 +364,11 @@ class Pet {
       vorrat["getranke"]--;
       this.reduceDurst(2);
       console.log(`${this.name} hat  getrunken!`);
-      // this.printStatus(this.name)
     } else {
       console.log(`Es gibt kein Wasser mehr`);
     }
   }
 }
-
 
 let type;
 let typeOfTier;
@@ -444,10 +433,10 @@ console.log(`\n\nDas Ziel des Spiels ist es, den Status überglücklich, kein Hu
 const tier = new Pet(name, type);
 console.log(tier);
 let exit = "n";
-let gewinn=false;
+let gewinn = false;
 
-while (exit !== "q" && tier.gesundheit > 0 &&  gewinn==false){
- 
+while (exit !== "q" && tier.gesundheit > 0 && gewinn == false) {
+
   console.log(`\n-------------------------------------------------------------------
     \n Was möchtest Du mit ${tier.name} machen? \n \n(A) spielen | (B) füttern | (C) Schlafen bringen \n(D) Wasser geben | (E) Vitamin geben | (F) pflegen | (Q) Quit \n `);
   let ergebniss = prompt();
@@ -468,32 +457,32 @@ while (exit !== "q" && tier.gesundheit > 0 &&  gewinn==false){
         tier.feed("fleisch");
         console.log(`Fleisch bleibt: ${vorrat['fleisch']}`);
         tier.printStatus();
-        
+
         break;
-       
+
       } else if (essen.toLowerCase() === "b") {
         tier.feed("fisch");
         console.log(`Fisch bleibt: ${vorrat['fisch']}`);
         tier.printStatus();
-       
+
         break;
       } else if (essen.toLowerCase() === "c") {
         tier.feed("karotte");
         console.log(`Karotte bleibt: ${vorrat['karotte']}`);
         tier.printStatus();
-       
+
         break;
       } else if (essen.toLowerCase() === "d") {
         tier.feed("kartoffel");
         console.log(`Kartoffel bleibt: ${vorrat['kartoffel']}`);
         tier.printStatus();
-        
+
         break;
       } else if (essen.toLowerCase() === "e") {
         tier.feed("apfel");
         console.log(`Apfel bleibt: ${vorrat['apfel']}`);
         tier.printStatus();
-        
+
         break;
       } else {
         console.log(`Opss! Du hast einen falschen Buchstaben ausgewählt.`);
@@ -506,14 +495,12 @@ while (exit !== "q" && tier.gesundheit > 0 &&  gewinn==false){
     tier.trinken();
     console.log(`Wasser bleibt: ${vorrat['getranke']}`);
     tier.printStatus();
-    
-    
+
   } else if (ergebniss.toLowerCase() === "e") {
     tier.addVitamin();
     console.log(`Vitamin bleibt: ${vorrat['vitamin']}`);
     tier.printStatus();
-    
-  
+
   } else if (ergebniss.toLowerCase() === "f") {
     tier.pflege();
     tier.printStatus();
@@ -521,10 +508,10 @@ while (exit !== "q" && tier.gesundheit > 0 &&  gewinn==false){
     console.log(`Opss! Du hast einen falschen Buchstaben ausgewählt.`);
   }
 
-  if(tier.gesundheit>=8 && tier.happyness===10 && tier.hungry===0 && tier.durst===0){
-    
-    gewinn=true;
-   
+  if (tier.gesundheit >= 8 && tier.happyness === 10 && tier.hungry === 0 && tier.durst === 0) {
+
+    gewinn = true;
+
   }
 
 }
@@ -538,8 +525,24 @@ let coffin = `   ___
 
 if (exit === "q") {
   console.log(`Bis dannn...`);
-} else if(gewinn==true){console.log(`Yuhuuuu!!! Du hast gewonnen!!!`);
+} else if (gewinn == true) {
+  const figurGewinn = `
+                      .-"-.         +
+                +    /     \\    *          *
+*       +            | #   |
+     *   .-"-.        \\___/           *   
+   +    /     \\        /V      .-"-.
+        | #   |       (       /     \\      +
+         \\___/         \\      | #   |
+  *       /V     *      )      \\___/
+         (         +            /V
+ +        \\                    (            *
+      *    )                +   \\
+                     *           )
+`
+  console.log(figurGewinn);
+  console.log(`Yuhuuuu!!! Du hast gewonnen!!!`);
 
-}else {
+} else {
   console.log(`${coffin} GAME OVER ${tier.name} ist leider gestorben! `);
 }
