@@ -15,10 +15,10 @@ class Pet {
   constructor(name, typeOfPet) {
     this.name = name,
       this.typeOfPet = typeOfPet,
-      this.happyness = 10,
+      this.happyness = 5,
       this.müde = 5,
       this.hungry = 5,
-      this.gesundheit = 10,
+      this.gesundheit = 5,
       this.durst = 5
   }
 
@@ -115,7 +115,7 @@ class Pet {
       hunger = 'ein wenig Hunger'
     } else if (this.hungry <= 7) {
       hunger = 'noch Hunger'
-    } else if (this.hungry < 9) {
+    } else if (this.hungry <= 9) {
       hunger = 'Hunger'
       console.log(
         `ACHTUNG! Wenn ${this.name} zu hungrig ist, verliert ${this.name} Gesundheit.`
@@ -130,13 +130,13 @@ class Pet {
     if (this.gesundheit <= 1) {
       gesund = "NICHT GESUND";
       console.log(`${this.name} ist KRANK! Gib ${this.name} Vitamin!`);
-    } else if (this.gesundheit <= 5) {
+    } else if (this.gesundheit <= 3) {
       gesund = "NICHT GANZ GESUND";
-    } else if (this.gesundheit <= 7) {
+    } else if (this.gesundheit <= 5) {
       gesund = "GESUND";
-    } else if (this.gesundheit <= 9) {
+    } else if (this.gesundheit <= 7) {
       gesund = "GANZ GESUND";
-    } else if (this.gesundheit > 9) {
+    } else if (this.gesundheit >= 8) {
       gesund = "ABSOLUT GESUND";
     }
     if (this.durst == 0) {
@@ -175,7 +175,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "apfel") {
+    } else if (this.typeOfPet.toLowerCase() == "hund" && food === "apfel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
         this.reduceHunger(1);
@@ -183,10 +183,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "kaninchen" &&
-      food === "apfel"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "apfel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
         this.reduceHunger(2);
@@ -195,10 +192,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "katze" &&
-      food === "kartoffel"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "katze" && food === "kartoffel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
         this.reduceHunger(1);
@@ -207,10 +201,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "hunde" &&
-      food === "kartoffel"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "hund" && food === "kartoffel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
         this.reduceHunger(1);
@@ -219,10 +210,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "kaninchen" &&
-      food === "kartoffel"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "kartoffel") {
       if (vorrat[food] > 0) {
         vorrat[food]--;
         this.reduceHunger(2);
@@ -240,7 +228,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "fisch") {
+    } else if (this.typeOfPet.toLowerCase() == "hund" && food === "fisch") {
       if (vorrat[food] > 0) {
         this.reduceHunger(2);
         vorrat[food]--;
@@ -248,10 +236,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "kaninchen" &&
-      food === "fisch"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "fisch") {
       if (vorrat[food] > 0) {
         this.reduceHunger(1);
         this.reduceGesund(1);
@@ -269,7 +254,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "fleisch") {
+    } else if (this.typeOfPet.toLowerCase() == "hund" && food === "fleisch") {
       if (vorrat[food] > 0) {
         this.reduceHunger(3);
         this.addHappyness(1);
@@ -277,10 +262,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "kaninchen" &&
-      food === "fleisch"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "fleisch") {
       if (vorrat[food] > 0) {
         this.reduceHunger(1);
         this.reduceGesund(1);
@@ -297,7 +279,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (this.typeOfPet.toLowerCase() == "hunde" && food === "karotte") {
+    } else if (this.typeOfPet.toLowerCase() == "hund" && food === "karotte") {
       if (vorrat[food] > 0) {
         this.reduceHunger(1);
         this.reduceHappyness(1);
@@ -305,10 +287,7 @@ class Pet {
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
-    } else if (
-      this.typeOfPet.toLowerCase() == "kaninchen" &&
-      food === "karotte"
-    ) {
+    } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "karotte") {
       if (vorrat[food] > 0) {
         this.reduceHunger(3);
         this.addHappyness(1);
