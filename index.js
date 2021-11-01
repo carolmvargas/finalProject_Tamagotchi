@@ -238,24 +238,25 @@ class Pet {
       }
     } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "fisch") {
       if (vorrat[food] > 0) {
+        vorrat[food]--;
         this.reduceHunger(1);
         this.reduceGesund(1);
         this.reduceHappyness(1);
-        vorrat[food]--;
         console.log(`${this.name} hat ${food} gegessen`);
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
     } else if (this.typeOfPet.toLowerCase() == "katze" && food === "fleisch") {
       if (vorrat[food] > 0) {
-        this.reduceHunger(2);
         vorrat[food]--;
+        this.reduceHunger(2);
         console.log(`${this.name} hat ${food} gegessen`);
       } else {
         console.log(`Vorrat hat kein(en) ${food} mehr!`);
       }
     } else if (this.typeOfPet.toLowerCase() == "hund" && food === "fleisch") {
       if (vorrat[food] > 0) {
+        vorrat[food]--;
         this.reduceHunger(3);
         this.addHappyness(1);
         console.log(`${this.name} hat ${food} gegessen`);
@@ -264,6 +265,7 @@ class Pet {
       }
     } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "fleisch") {
       if (vorrat[food] > 0) {
+        vorrat[food]--;
         this.reduceHunger(1);
         this.reduceGesund(1);
         this.reduceHappyness(1);
@@ -273,6 +275,7 @@ class Pet {
       }
     } else if (this.typeOfPet.toLowerCase() == "katze" && food === "karotte") {
       if (vorrat[food] > 0) {
+        vorrat[food]--;
         this.reduceHunger(1);
         this.reduceHappyness(1);
         console.log(`${this.name} hat ${food} gegessen`);
@@ -281,6 +284,7 @@ class Pet {
       }
     } else if (this.typeOfPet.toLowerCase() == "hund" && food === "karotte") {
       if (vorrat[food] > 0) {
+        vorrat[food]--;
         this.reduceHunger(1);
         this.reduceHappyness(1);
         console.log(`${this.name} hat ${food} gegessen`);
@@ -289,6 +293,7 @@ class Pet {
       }
     } else if (this.typeOfPet.toLowerCase() == "kaninchen" && food === "karotte") {
       if (vorrat[food] > 0) {
+        vorrat[food]--;
         this.reduceHunger(3);
         this.addHappyness(1);
         console.log(`${this.name} hat ${food} gegessen`);
@@ -348,7 +353,7 @@ class Pet {
     }
   }
 }
-
+clearConsole();
 let type;
 let typeOfTier;
 while (true) {
@@ -356,7 +361,7 @@ while (true) {
     "Welches Tier möchtest Du haben? \n \n(A) Katze | (B) Hund | (C) Kaninchen\n \nWähle bitte einen Buchstaben aus: A, B oder C? \n"
   );
   typeOfTier = prompt(``);
-  console.clear();
+  clearConsole();
   if (typeOfTier.toLowerCase() === "a") {
     type = "katze";
 
@@ -382,7 +387,7 @@ while (true) {
 }
 
 let name = prompt(`Wie heißt dein Tier? `);
-console.clear();
+
 let figur;
 let artikel;
 if (type === "hund") {
@@ -404,6 +409,9 @@ if (type === "hund") {
  (**)
 o( O )`;
 }
+
+clearConsole();
+
 console.log(`
 ${figur}     Yuhuuu!!! Du hast jetzt ${artikel} ${type.toUpperCase()}.
 `);
@@ -419,7 +427,7 @@ while (exit !== "q" && tier.gesundheit > 0 && gewinn == false) {
   console.log(`\n-------------------------------------------------------------------
     \n Was möchtest Du mit ${tier.name} machen? \n \n(A) spielen | (B) füttern | (C) Schlafen bringen \n(D) Wasser geben | (E) Vitamin geben | (F) pflegen | (Q) Quit \n `);
   let ergebniss = prompt();
-  console.clear();
+  clearConsole();
   if (ergebniss.toLowerCase() === "a") {
     tier.play();
     tier.printStatus();
@@ -431,7 +439,7 @@ while (exit !== "q" && tier.gesundheit > 0 && gewinn == false) {
         `-------------------------------------------------------------------\nWomit möchtest du ${tier.name} füttern? \n\n(A) Fleisch | (B) Fisch | (C) Karotte \n(D) Kartoffel | (E) Apfel`
       );
       let essen = prompt();
-      console.clear();
+      clearConsole();
       if (essen.toLowerCase() === "a") {
         tier.feed("fleisch");
         console.log(`Fleisch bleibt: ${vorrat['fleisch']}`);
@@ -524,4 +532,9 @@ if (exit === "q") {
 
 } else {
   console.log(`${coffin} GAME OVER ${tier.name} ist leider gestorben! `);
+}
+
+function clearConsole() {
+  process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");
+  console.clear();
 }
