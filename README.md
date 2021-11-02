@@ -1,8 +1,3 @@
-# finalProject_Tamagotchi
-
-Caroline
-Mauro
-Siddik
 
 # Haustierpflege: Die Mission! 
 ## Kümmere dich um dein Haustier, damit du das Spiel gewinnen kannst.
@@ -23,7 +18,7 @@ Siddik
 ## Nahrungsmittel
 * Es gibt 5 verschiedene Arten von Nahrungsmitteln (Fleisch, Fisch, Karotten, Kartoffeln, Apfel).
 * Jedes dieser Nahrungssmittel hat unterschiedliche Eigenschaften und ist besser oder schlechter für die Gesundheit Ihres Haustieres. (Je nach gewähltem Tier).
-* Jedes dieser Nahrungsmittel hat einen maximalen Vorrat von 10.
+* Jedes dieser Nahrungsmittel hat einen maximalen Vorrat von 5.
 * Um das Spiel zu gewinnen, muss der Spieler seinen Vorrat mit Bedacht einsetzen.
 
 ## Vitamine
@@ -35,4 +30,6 @@ Siddik
 * Trinken ist sehr wichtig, um das Haustier am Leben zu erhalten.
 * Wenn es sehr durstig ist, verschlechtert sich seine Gesundheit.
 
+## Entwickler
+* Entwickelt von Caroline Vargas, Mauro Stein und Siddik Polat.
 
