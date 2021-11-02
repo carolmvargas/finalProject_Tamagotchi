@@ -1,5 +1,5 @@
-
-# Haustierpflege: Die Mission! 
+#  Javascript Final Project:
+# Spiel : Haustierpflege: Die Mission! 
 
 ## Technologien
 * JavaScript
