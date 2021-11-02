@@ -95,7 +95,7 @@ class Pet {
       console.log(
         `ACHTUNG! Wenn ${this.name} sehr müde ist, verliert ${this.name} Gesundheit.`
       );
-    } else if (this.müde > 8) {
+    } else if (this.müde >= 8) {
       müde = 'sehr müde'
       this.reduceGesund(1)
       console.log(
