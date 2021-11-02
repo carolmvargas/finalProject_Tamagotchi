@@ -4,31 +4,35 @@ Caroline
 Mauro
 Siddik
 
-# Haustierpflege: Die Missionen 
-## Kümmere dich während der Missionen um dein Haustier
+# Haustierpflege: Die Mission! 
+## Kümmere dich um dein Haustier, damit du das Spiel gewinnen kannst.
+
+* Ziel des Spiels ist es, sich um das Haustier zu kümmern und es in den Status kein Hunger, kein Durst, überglücklich und absolut Gesund zu bringen.
+* Der Spieler kann 3 Haustiere auswählen (Katze, Hund und Kaninchen).
+* Zum Spielen wählt man eines der verfügbaren Tiere aus.
+* Danach kann man sich um das Tier kümmern, indem man es füttern, ihm Vitamine oder Wasser geben, es spielen lassen, pflegen und Schlaf bringen.
+
+## Das Spiel hat einige Besonderheiten
+
+* Wenn Hunger auf Stufe "größer Hunger" ist, verliert es Gesundheit.
+* Wenn Durst auf Stufe "größer Durst" ist, verliert es Gesundheit.
+* Wenn das Haustier Wütend ist,veliert es auch Gesundheit.
+* Wenn das Haustier müde ist, veliert es auch Gesundheit.
+* Wenn die Gesundheit null ist, stirbt es.
+
+## Nahrungsmittel
+* Es gibt 5 verschiedene Arten von Nahrungsmitteln (Fleisch, Fisch, Karotten, Kartoffeln, Apfel).
+* Jedes dieser Nahrungssmittel hat unterschiedliche Eigenschaften und ist besser oder schlechter für die Gesundheit Ihres Haustieres. (Je nach gewähltem Tier).
+* Jedes dieser Nahrungsmittel hat einen maximalen Vorrat von 10.
+* Um das Spiel zu gewinnen, muss der Spieler seinen Vorrat mit Bedacht einsetzen.
+
+## Vitamine
+* Vitamine können verwendet werden, um die Gesundheit Ihres Haustieres zu verbessern.
+* Vitamine haben auch einen maximalen Vorrat von 10.
+
+## Getränk
+* Getränk hat auch einen maximalen Vorrat von 10.
+* Trinken ist sehr wichtig, um das Haustier am Leben zu erhalten.
+* Wenn es sehr durstig ist, verschlechtert sich seine Gesundheit.
 
 
-* Zweck des Spiels ist es, sich um das Haustier zu kümmern und alle Missionen zu beenden.
-* Das Spiel wird von dem Spieler gewonnen, der zuerst alle Missionen beenden kann.
-* Das Spiel wird insgesamt 5 Missionen haben.
-* Die Missionen sind geheim, aber es werden Hinweise gegeben, damit der Spieler sie abschließen kann. 
-* Die Missionen bestanden darin, die Interaktionsaktivitäten mit dem Haustier zu kombinieren. Zum Beispiel Futtern, Pflege, usw. 
-
-* Wenn Hunger auf Stufe 10 ist, verliert er Gesundheit.
-* Wenn Durst auf Stufe 10 ist, verliert er Gesundheit.
-* Wenn die Gesundheit null ist, stirbt er.
-
-* Das Spiel wird 3 Haustiere haben (Katze, Hund und Kaninchen).
-* Jedes Tier hat seine eigenen Missionen. 
-* Nahrung: Fleisch, Fisch, Karotten, Kartoffeln, Kohl, Apfel.
-
-## Missionen
-* Erste Mission: Laufen, füttern und trinken.
-
-* Zweite Mission: Pflege, Schlaf, spielen, füttern (mit bestimmtem Essen).
-
-* Dritte Mission: Füttern (mit bestimmtem Essen), trinken, spielen, Stimung muss GLÜCKLICH sein.
-
-* Vierte Mission: Pflege, Schlaf, Vitamin, füttern (mit bestimmtem Essen und Menge). Gesundheit muss GUT sein.
-
-* Fünfte Mission: Füttern (mit bestimmtem Essen und Menge), Schlaf, Vitamin, spielen, trinken. Gesundheit muss GROSSARTIG und Stimmung ÜBERGLÜCKLICH sein.
