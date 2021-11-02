@@ -1,6 +1,10 @@
 #  Javascript Final Project: Haustierpflege: Die Mission!  
 
-Dies ist ein Projekt zum Abschluss eines Modul von DCI. Dieses Projekt ist ein Spiel, das mit der Programmiersprache Javascript erstellt wurde.
+## Abschlussprojekt des DCI-Javascript-Moduls
+* Die Idee ist, ein interaktives Spiel zu entwickeln, das es dem Benutzer ermöglicht, direkt in Visual Studio Code über das Terminal zu spielen.
+* Das Spiel ermöglicht es dem Spieler, das Spiel zu gewinnen oder zu verlieren, je nachdem, wie er spielt.
+* Das Spiel hat keine feste Zeit, dh der Spieler kann weiterspielen, solange er nicht gewinnt oder verliert.
+* Dies ist ein Projekt, das mit der Programmiersprache Javascript entwickelt wurde.
 
 ## Technologien
 * JavaScript
