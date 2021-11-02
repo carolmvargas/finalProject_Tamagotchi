@@ -10,8 +10,8 @@
 
 ## Technologien
 * JavaScript
-* Npm
-* GitHub
+* Node.js
+* Git
 * Prompt-Sync (https://www.npmjs.com/package/prompt-sync)
 
 ## Anleitung
