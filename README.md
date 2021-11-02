@@ -1,4 +1,6 @@
-#  Javascript Final Project: Haustierpflege: Die Mission! 
+#  Javascript Final Project: Haustierpflege: Die Mission!  
+
+Dies ist ein Projekt zum Abschluss eines Modul von DCI. Dieses Projekt ist ein Spiel, das mit der Programmiersprache Javascript erstellt wurde.
 
 ## Technologien
 * JavaScript
