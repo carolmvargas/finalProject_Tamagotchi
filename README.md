@@ -21,9 +21,9 @@
 * Jedes dieser Nahrungsmittel hat einen maximalen Vorrat von 5.
 * Um das Spiel zu gewinnen, muss der Spieler seinen Vorrat mit Bedacht einsetzen.
 
-## Vitamine
-* Vitamine können verwendet werden, um die Gesundheit Ihres Haustieres zu verbessern.
-* Vitamine haben auch einen maximalen Vorrat von 10.
+## Vitamin
+* Vitamin kann verwendet werden, um die Gesundheit des Haustieres zu verbessern.
+* Vitamin hat auch einen maximalen Vorrat von 10.
 
 ## Getränk
 * Getränk hat auch einen maximalen Vorrat von 10.
