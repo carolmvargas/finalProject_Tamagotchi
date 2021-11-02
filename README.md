@@ -22,7 +22,7 @@
 1) Klonen in Github die Datei https://github.com/carolmvargas/finalProject_Tamagotchi
 2) Öffnen die Datei index.js in VSC.
 3) Öffnen das Terminal in VSC.
-4) Im Terminal installiere prompt-sync mit dem Befehl npm install prompt-sync
+4) Im Terminal installieren prompt-sync mit dem Befehl npm install prompt-sync
 5) Node index.js in das Terminal schreiben.
 6) Viel Spaß mit dem Spiel!
 
