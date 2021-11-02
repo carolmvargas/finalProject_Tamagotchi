@@ -6,7 +6,7 @@
 * Das Spiel hat keine feste Zeit, dh der Spieler kann weiterspielen, solange er nicht gewinnt oder verliert.
 * Dies ist ein Projekt, das mit der Programmiersprache Javascript entwickelt wurde.  
 
-![](fotobeispiel-min.png)  
+![](fotobeispiel_320x303.jpg)  
 
 ## Technologien
 * JavaScript
