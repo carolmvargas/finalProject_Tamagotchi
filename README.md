@@ -18,7 +18,7 @@
 * [Click hier](Anleitung.md)
 
 
-## Spielinstallation
+## Installation
 1) Klonen in Github die Datei https://github.com/carolmvargas/finalProject_Tamagotchi
 2) Öffnen die Datei index.js in VSC.
 3) Öffnen das Terminal in VSC.
