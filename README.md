@@ -30,6 +30,12 @@
 * Trinken ist sehr wichtig, um das Haustier am Leben zu erhalten.
 * Wenn es sehr durstig ist, verschlechtert sich seine Gesundheit.
 
+## Technologien
+* JavaScript
+* Npm
+* GitHub
+* Prompt-Sync (https://www.npmjs.com/package/prompt-sync)
+
 ## Entwickler
 * Entwickelt von Caroline Vargas, Mauro Stein und Siddik Polat.
 
