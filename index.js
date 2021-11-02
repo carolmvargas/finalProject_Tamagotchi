@@ -84,13 +84,8 @@ class Pet {
       console.log(
         `ACHTUNG! Wenn ${this.name} wütend ist, verliert ${this.name} Gesundheit.`
       );
-    } else if (this.happyness <= 7) {
-      mood = "froh";
-    } else if (this.happyness <= 9) {
-      mood = "glücklich";
-    } else if (this.happyness == 10) {
-      mood = "überglücklich";
     }
+    
     if (this.müde <= 1) {
       müde = 'nicht müde'
     } else if (this.müde <= 3) {
