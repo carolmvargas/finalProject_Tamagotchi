@@ -1,4 +1,4 @@
-#  Javascript Final Project: Haustierpflege: Die Mission!  
+# Haustierpflege: Die Mission!  
 
 ## Abschlussprojekt des DCI-Javascript-Moduls
 * Die Idee ist, ein interaktives Spiel zu entwickeln, das es dem Benutzer ermöglicht, direkt in Visual Studio Code über das Terminal zu spielen.
