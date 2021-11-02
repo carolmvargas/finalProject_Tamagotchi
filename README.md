@@ -17,8 +17,6 @@
 ## Anleitung
 * [Click hier](Anleitung.md)
 
-## Entwickler
-* Entwickelt von Caroline Vargas, Mauro Stein und Siddik Polat.
 
 ## Spielinstallation
 1) Klonen Sie in Github die Datei https://github.com/carolmvargas/finalProject_Tamagotchi
@@ -26,3 +24,7 @@
 3) Öffnen Sie das Terminal in VSC.
 4) Im Terminal installiere prompt-sync mit dem Befehl npm install prompt-sync
 5) Node index.js in das Terminal schreiben.
+6) Viel Spaß mit dem Spiel!
+
+## Entwickler
+* Entwickelt von Caroline Vargas, Mauro Stein und Siddik Polat.
