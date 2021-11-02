@@ -5,6 +5,7 @@
 * Das Spiel ermöglicht dem Spieler, das Spiel zu gewinnen oder zu verlieren, je nachdem, wie er spielt.
 * Das Spiel hat keine feste Zeit, das Heißt der Spieler kann weiterspielen, solange er nicht gewinnt oder verliert.
 * Dies ist ein Projekt, das mit der Programmiersprache Javascript entwickelt wurde.  
+* Groß- und Kleinbuchstaben sollten keine Rolle spielen.
 
 ![](fotobeispiel.png)  
 
